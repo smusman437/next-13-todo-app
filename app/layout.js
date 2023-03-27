@@ -1,4 +1,6 @@
-import './globals.css'
+import Navbar from "@/components/Navbar";
+import "./globals.css";
+import styles from "./page.module.css";
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +10,10 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <div className={styles.children}>{children}</div>
+      </body>
     </html>
-  )
+  );
 }
